@@ -3,14 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.blueflame.script.Homepage">
+      <class name="com.blueflame.script.Audit">
         <methods>
-          <include name="demo"/>
-          <include name="Login"/>
-          <include name="logOut"/>
+          <include name="CloseBrowser"/>
+          <include name="Auditvalidation"/>
           <include name="OpenBrowsder"/>
         </methods>
-      </class> <!-- com.blueflame.script.Homepage -->
+      </class> <!-- com.blueflame.script.Audit -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

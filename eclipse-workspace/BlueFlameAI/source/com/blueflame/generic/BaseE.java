@@ -22,50 +22,32 @@ import dev.failsafe.internal.util.Assert;
 public class BaseE {
 
 	public WebDriver driver;
-	public WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
-	
-	@BeforeTest
+	public WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+
+	@BeforeClass
 	public void OpenBrowsder() throws IOException {
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		FileLib f=new FileLib();
+		FileLib f = new FileLib();
 		String url = f.getPropertyData("url");
 		driver.get(url);
 	}
-//	@AfterTest
-//	public void closeBrowser() {
-//	Reporter.log("closeBrowser",true);	
-//	driver.quit();
-//	}
 
-	@BeforeMethod
-	public void Login() throws IOException {
-		FileLib f=new FileLib();
-		LoginPom l=new LoginPom(driver);
-		String email = f.getPropertyData("email");
-		l.Emailfield().sendKeys(email);
-		String printemail = l.Emailfield().getAttribute("value");
-		System.out.println(printemail);
-		
-		l.ArrowButton().click();
-		String pswrd=f.getPropertyData("pwd");
-		l.pwd().sendKeys(pswrd);
-		String printpwd=l.pwd().getAttribute("value");
-		System.out.println(printpwd);
-		org.testng.Assert.assertEquals(pswrd, printpwd);
-		org.testng.Assert.assertEquals(email, printemail);
-	
-		
-	}
+//	@BeforeClass
+//	public void ValidLogin() throws IOException {
+//		LoginPom l = new LoginPom(driver);
+//		FileLib f = new FileLib();
+//		String emailname = f.getPropertyData("email");
+//		l.Emailfield().sendKeys(emailname);
+//		String password = f.getPropertyData("pwd");
+//		l.pwd().sendKeys(password);
+//		l.ArrowButton().click();
+//	}
 //	@AfterMethod
 //	public void logOut(){
 //	}
-	
-	
-	
-	
-	
+
 //	@BeforeClass
 //	public void OpenBrowser() {
 //		driver = new ChromeDriver();
@@ -77,11 +59,8 @@ public class BaseE {
 //		l.Emailfield().sendKeys("dev+webskitters@blueflame.ai");
 //		l.ArrowButton().click();
 
-//		@AfterClass
-//		public void CloseBrowser() {
-//			driver.quit();
-//		}
-	
-
-//	}
+		@AfterClass
+		public void CloseBrowser() {
+			driver.quit();
+		}
 }

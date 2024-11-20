@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-10-24T16:54:12 IST" name="Default suite" finished-at="2024-10-24T16:54:17 IST" duration-ms="5117">
+  <suite started-at="2024-11-20T16:51:02 IST" name="Default suite" finished-at="2024-11-20T16:51:13 IST" duration-ms="10452">
     <groups>
     </groups>
-    <test started-at="2024-10-24T16:54:12 IST" name="Default test" finished-at="2024-10-24T16:54:17 IST" duration-ms="5117">
-      <class name="com.blueflame.script.Homepage">
-        <test-method is-config="true" signature="OpenBrowsder()[pri:0, instance:com.blueflame.script.Homepage@639c2c1d]" started-at="2024-10-24T16:54:12 IST" name="OpenBrowsder" finished-at="2024-10-24T16:54:14 IST" duration-ms="2469" status="PASS">
+    <test started-at="2024-11-20T16:51:02 IST" name="Default test" finished-at="2024-11-20T16:51:13 IST" duration-ms="10452">
+      <class name="com.blueflame.script.Audit">
+        <test-method is-config="true" signature="OpenBrowsder()[pri:0, instance:com.blueflame.script.Audit@22555ebf]" started-at="2024-11-20T16:51:02 IST" name="OpenBrowsder" finished-at="2024-11-20T16:51:05 IST" duration-ms="2125" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OpenBrowsder -->
-        <test-method is-config="true" signature="Login()[pri:0, instance:com.blueflame.script.Homepage@639c2c1d]" started-at="2024-10-24T16:54:14 IST" name="Login" finished-at="2024-10-24T16:54:17 IST" duration-ms="2628" status="PASS">
+        <test-method signature="Auditvalidation()[pri:0, instance:com.blueflame.script.Audit@22555ebf]" started-at="2024-11-20T16:51:05 IST" name="Auditvalidation" finished-at="2024-11-20T16:51:13 IST" duration-ms="8201" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Login -->
-        <test-method signature="demo()[pri:0, instance:com.blueflame.script.Homepage@639c2c1d]" started-at="2024-10-24T16:54:17 IST" name="demo" finished-at="2024-10-24T16:54:17 IST" duration-ms="5" status="PASS">
+        </test-method> <!-- Auditvalidation -->
+        <test-method is-config="true" signature="CloseBrowser()[pri:0, instance:com.blueflame.script.Audit@22555ebf]" started-at="2024-11-20T16:51:13 IST" name="CloseBrowser" finished-at="2024-11-20T16:51:13 IST" duration-ms="105" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- demo -->
-      </class> <!-- com.blueflame.script.Homepage -->
+        </test-method> <!-- CloseBrowser -->
+      </class> <!-- com.blueflame.script.Audit -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
